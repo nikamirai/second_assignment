@@ -1,5 +1,9 @@
-import chalk from 'chalk'
-console.log(chalk.green('Hello World!'))
+
+import {secretKey} from "./utils.js";
+const d = secretKey;
+
+// import chalk from 'chalk';
+// console.log(chalk.green('Hello World!'))
 // ПЕРВОЕ ЗАДАНИЕ
 //
 // Укажите что выведется
