@@ -134,3 +134,12 @@ const podschetDeneg = (ostatok = sdacha) => {
 };
 console.log(podschetDeneg(100));
 console.log(podschetDeneg(6579));
+
+// ПОСЧИТАТЬ ПЛОЩАДЬ
+
+//Напишите функцию, которая получат на вход сторону квадрата, а возвращает площадь квадрата.
+//Размер стороны квадрата сгенерируйте самостоятельно, она должна быть целым число от 1 до 10, передайте его в функцию.
+//Выведите примерно такое сообщение (цифры должны быть ваши)
+
+const randomChislo = Math.ceil(Math.random() * 10);
+console.log('Сторона квадрата - ' + randomChislo + '\nПлощадь квадрата - ' + randomChislo * randomChislo);
