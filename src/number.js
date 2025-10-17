@@ -256,3 +256,12 @@ const rediusCruga = (rad = Math.floor(Math.random() * (max - min + 1)) + min) =>
 console.log(rediusCruga());
 console.log(rediusCruga());
 console.log(rediusCruga());
+
+// Напишите функцию isEven, которая получает на вход число, и возвращает true/false является ли оно чётным или нет.
+
+const isEven = (chislo) => {
+  return chislo % 2 == 0;
+};
+
+console.log(isEven(123));
+console.log(isEven(100));
