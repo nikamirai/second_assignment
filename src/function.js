@@ -21,3 +21,25 @@ const sovershen = (age) => {
 const max = 22;
 const min = 15;
 console.log(sovershen(Math.floor(Math.random() * (max - min + 1)) + min));
+
+// Напишите функцию, которая принимает на вход число, и возвращает:
+// Fizz, если число делится нацело на 3
+// Buzz, если число делится нацело на 5
+// FizzBuzz если число делится и на 3 и на 5
+// Вызовите функцию и передайте туда случайное число от 9 до 20 и выведите результат
+
+const neZnauTakixSlov = (chislo) => {
+  if (chislo % 3 === 0) {
+    return 'Fizz';
+  } else if (chislo % 5 === 0) {
+    return 'Buzz';
+  } else if (chislo % 3 === 0 && chislo % 5) {
+    return 'FizzBuzz';
+  } else {
+    return 'Число не Buzz, не Fizz и не FizzBuzz';
+  }
+};
+
+const max1 = 20;
+const min1 = 9;
+console.log(neZnauTakixSlov(Math.floor(Math.random() * (max1 - min1 + 1)) + min1));
