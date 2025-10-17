@@ -267,11 +267,3 @@ console.log(isEven(123));
 console.log(isEven(100));
 console.log('-----------------------------');
 
-const compare = (a, b) => {
-  return a === b;
-};
-
-console.log(compare('100', 100));
-console.log(compare('100', 'str'));
-console.log(compare('str', 'str'));
-console.log(compare('Str', 'str'));
