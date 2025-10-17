@@ -239,3 +239,20 @@ console.log(prognoz());
 console.log(prognoz());
 console.log(prognoz());
 
+
+// Напишите функцию, которая получает на вход радиус круга, а возвращает его площадь, округлённую до 2х цифр после запятой.
+// Радиус круга сгенерируйте случайно, пусть это будет целое число от 3 до 12.
+// Результат вычислений функции запишите в переменную, а потом выведите сообщение в подобном формате:
+// Радиус: 10
+// Площадь: 314.16
+
+const max = 3;
+const min = 12;
+const rediusCruga = (rad = Math.floor(Math.random() * (max - min + 1)) + min) => {
+  return `Радиус: ${rad}
+Площадь: ${3.14 * (rad * rad).toFixed(2)}`;
+};
+
+console.log(rediusCruga());
+console.log(rediusCruga());
+console.log(rediusCruga());
