@@ -230,7 +230,10 @@ console.log(kolPart(8, 5));
 const prognoz = () => {
   const max = 801;
   const min = 199;
-  const tempetatura = Math.random() * (max - min + 1) + min;
+  let tempetatura = Math.random() * (max - min + 1) + min;
+  do {
+    tempetatura = Math.random() * (max - min + 1) + min;
+  } while (Math.floor(tempetatura) % 10 !== 0);
   return `Прогноз погоды на TerraRandomis: Температура завтра ${tempetatura.toFixed(6)} ${chalk.blue('C')}`;
 };
 
