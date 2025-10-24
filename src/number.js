@@ -253,7 +253,7 @@ const max = 3;
 const min = 12;
 const rediusCruga = (rad = Math.floor(Math.random() * (max - min + 1)) + min) => {
   return `Радиус: ${rad}
-Площадь: ${3.14 * (rad * rad).toFixed(2)}`;
+Площадь: ${(Math.PI * (rad * rad)).toFixed(2)}`;
 };
 
 console.log(rediusCruga());
