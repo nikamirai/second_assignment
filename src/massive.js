@@ -57,3 +57,30 @@ addUniqueItem(shoppingList, 'молоко');
 addUniqueItem(shoppingList, 'сыр');
 
 console.log(shoppingList);
+
+//Что выведет код?
+//Что выведет каждый из console.log? Почему вывод именно такой?
+const list = ['Молоко', 'Хлеб', 'Картошка', 'Капустка', 'Сок'];
+
+list.push('Ветчина');
+list.push('Помидоры');
+list.push('Огурцы');
+
+list.pop();
+
+let res = 'ве';
+let a = 'тч';
+res += a;
+a = 'ина';
+res += a;
+
+console.log(list.includes(res)); //есть ли в массиве list ветчина. ее нет. false
+
+res = ''.repeat(res.length);
+a = 'ок';
+res += a;
+a = ['с'];
+res = a[0].toUpperCase() + res;
+
+console.log(list.indexOf(res)); //вывелась длина 4, так как Сок находится на индексе 4
+console.log(list[list.length - 1].length * 3); //длина Ветчины = 7; 7×3 = 21
