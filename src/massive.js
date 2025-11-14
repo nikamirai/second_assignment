@@ -1,7 +1,7 @@
 // Напишите функцию, которая принимает на вход массив и соединитель, и выводит все элементы массива через заданный соединитель, используя функцию массива .join
 // Выведите все элементы массива, соединяя их через нижнее подчеркивание _
 
-const names = ['Ruslan', 'Kirill'];
+const names = ['Ruslan', 'Kirill', 'Maxim', 'Petr'];
 
 const joinArray = (mass, sep) => {
   return mass.join(sep);
@@ -28,3 +28,13 @@ console.log(user); // { id: 8, nickname: 'Саша', nicknameHistory: [ 'Сан�
 
 const max = { id: 3, nickname: 'Franz Hermann', nicknameHistory: ['max', 'maxxx'] };
 console.log(max); // { id: 3, nickname: 'Franz Hermann', nicknameHistory: [ 'max', 'maxxx' ]}
+
+// Случайный элемент массива
+// Напишите функцию getRandomItem(arr), которая принимает на вход массив элементов arr, а возвращает случайный элемент из этого массива.
+
+const getRandomItem = (arr) => {
+  const randomIndex = Math.floor(Math.random() * arr.length);
+  return arr[randomIndex];
+};
+
+console.log(getRandomItem(names));
