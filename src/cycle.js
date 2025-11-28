@@ -84,3 +84,25 @@ const cheredColor = (num, chislo = 0) => {
 };
 
 cheredColor(Math.floor(Math.random() * (25 - 5 + 1) + 5));
+
+//------------------------------------------------ ---------------------------------------- ------------------------------------------
+// Цветной вывод ключей-значений
+// Напишите функцию, которая получает объект, и выводит ключи и их значения, при этом ключи красным, а значения жёлтым
+
+const person = {
+  id: 8,
+  age: 35,
+  name: 'Алексей',
+  surname: 'Фролов',
+  photo: null,
+};
+
+const colorKey = (Obj) => {
+  const { id, age, name, surname, photo } = Obj;
+  console.log(chalk.red('id'), ':', chalk.yellow(id));
+  console.log(chalk.red('name'), ':', chalk.yellow(name));
+  console.log(chalk.red('surname'), ':', chalk.yellow(surname));
+  console.log(chalk.red('photo'), ':', chalk.yellow(photo));
+};
+
+colorKey(person);
