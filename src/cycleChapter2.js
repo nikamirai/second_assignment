@@ -54,3 +54,54 @@ const users = [
 
 const result = mostPopularAdultName(users);
 console.log(result); // ivan
+
+/*
+Задание 4. Напишите функцию, которая получает на вход массив объектов с людьми, и возвращает только имена "подходящих" людей из списка:
+* Мужчины старше 18 или женщины старше 20
+
+Пол определяется по значению в поле gender:
+* f - female, женщина
+* m - man, мужчина
+ */
+
+const filter = (people) => {
+  const sortPeople = {};
+  let kolM = 0;
+  let kolF = 0;
+  for (const user of people) {
+    if (user.gender === 'm' && user.age > 18 && kolM === 0) {
+      kolM++;
+      sortPeople.mans = user.name + ' ';
+    } else if (user.gender === 'm' && user.age > 18) {
+      sortPeople.mans += user.name + ' ';
+    }
+    if (user.gender === 'f' && user.age > 20 && kolF === 0) {
+      kolF++;
+      sortPeople.women = user.name + ' ';
+    } else if (user.gender === 'f' && user.age > 20) {
+      sortPeople.women += user.name + ' ';
+    }
+  }
+  return sortPeople;
+};
+
+const people = [
+  { id: 8, name: 'Александр', gender: 'm', age: 25 },
+  { id: 12, name: 'Мария', gender: 'f', age: 22 },
+  { id: 31, name: 'Иван', gender: 'm', age: 17 },
+  { id: 34, name: 'Ольга', gender: 'f', age: 19 },
+  { id: 53, name: 'Дмитрий', gender: 'm', age: 30 },
+  { id: 95, name: 'Екатерина', gender: 'f', age: 21 },
+  { id: 3, name: 'Сергей', gender: 'm', age: 18 },
+  { id: 20, name: 'Анна', gender: 'f', age: 20 },
+  { id: 19, name: 'Андрей', gender: 'm', age: 15 },
+  { id: 30, name: 'Наталья', gender: 'f', age: 25 },
+];
+
+console.log(filter(people));
+/* Должно вывестись:
+{
+  mans: [ 'Александр', 'Дмитрий' ],
+  women: [ 'Мария', 'Екатерина', 'Наталья' ]
+}
+ */
