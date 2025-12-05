@@ -129,3 +129,29 @@ const round = (mass) => {
 
 const chisla = [1.1, 2.2, -2, 3.3, -1, 5.5, 5.99, 7.49, 7.9999, -2.2, -3];
 round(chisla);
+
+// Елочка
+// Напишите функцию, которая принимает на вход высоту, и выводит в консоль такую ёлочку заданной высоты,
+// используя цикл for i . При изменении высоты h, ваша ёлочка должна тоже меняться, например при h=8 должна нарисоваться ёлочка высотой 8.
+
+const elochka = (kol) => {
+  const probel = ' ';
+  const star = '*';
+  let kolStar = kol * 2 - 1;
+  let strStar = '';
+  let strProbel = '';
+  for (let i = 0; i < kol; i++) {
+    for (let j = 1; j < i + 3; j += 2) {
+      strStar += star;
+    }
+    for (let z = 0; z <= (kolStar - 1) / 2; z++) {
+      strProbel += probel;
+    }
+    const res = strProbel + strStar;
+    console.log(res);
+    kolStar -= 2;
+    strProbel = '';
+  }
+};
+
+elochka(5);
