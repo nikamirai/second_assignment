@@ -105,3 +105,27 @@ console.log(filter(people));
   women: [ 'Мария', 'Екатерина', 'Наталья' ]
 }
  */
+
+// Задание 5. Округлить значения
+// Дан массив чисел, необходимо округлить каждое положительное число в нем, кроме последних трех положительных чисел.
+
+const round = (mass) => {
+  let kolPol = 0; //кол положит чисел с конца
+  let index = 0; // индекс 1-го из 3-х с конца положит. чисел
+  for (let i = mass.length; i <= mass.length && i !== 0; i--) {
+    if (kolPol < 3) {
+      if (mass[i] > 0) {
+        kolPol++;
+        index = i;
+      }
+    }
+  }
+
+  for (let i = 0; i < index; i++) {
+    mass[i] = Math.round(mass[i]);
+  }
+  console.log(mass);
+};
+
+const chisla = [1.1, 2.2, -2, 3.3, -1, 5.5, 5.99, 7.49, 7.9999, -2.2, -3];
+round(chisla);
